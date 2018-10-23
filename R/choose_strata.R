@@ -50,7 +50,7 @@ choose_strata <- function(svspp, season, mask_type, downsample = F){
     r.new <- raster::resample(r1, r2, method="bilinear")
     r.new[is.finite(r.new)] <- 1 
   } else {
-    r.new <- strata
+    r.new <- stock_strata
   }
   
   return(r.new)
